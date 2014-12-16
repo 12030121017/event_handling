@@ -4,5 +4,7 @@
     <string name="app_name">event_handling</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="caption">Logon</string>
+    <color name="dk_blue">#0000cc</color>
 
 </resources>

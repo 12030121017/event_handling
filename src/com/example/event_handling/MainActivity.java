@@ -1,15 +1,38 @@
 package com.example.event_handling;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
+	private Button click;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		click = (Button) findViewById(R.id.btnClick);
+		//click.setText(getResources().getString(R.string.caption));
+		//click.setTextColor(getResources().getColor(R.color.dk_blue));
+		//click.setTextColor(Color.GREEN);
+		//click.setBackgroundColor(Color.YELLOW);
+		//click.setTextSize((float)17.3);
+		
+		OnClickListener listener= new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				click.setText("Button was clicked!");
+				
+			}
+		};
+		click.setOnClickListener(listener);
+		
 	}
 
 	@Override
